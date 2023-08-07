@@ -40,20 +40,20 @@ $driver = $manager->getDefaultDriver();
 // In Denmark the format is 8-digits
 $driver->getFormats('DK'); // ['########']
 
-$driver->isValidFormat('DK', '12345678'); // true
+$driver->isValidFormat('DK', '12345678'); // bool
 
 // This will do an API lookup.
 // Will throw a VatServiceUnavilable if the service is down
-$driver->isValid('DK', '12345678'); // true
+$driver->isValid('DK', '12345678'); // bool
 
 // Will throw a validation exception
-$driver->validate('DK', 'INVALID')
+$driver->validate('DK', 'INVALID');
 
 // Get a DTO with info about the company
-$driver->getDetails('DK', '12345678');
+$driver->getInformation('DK', '12345678'); // VatInformation
 
 // Find relevant companies based on company name or vat number
-$driver->search('DK', 'Carlsberg');
+$driver->search('DK', 'Carlsberg'); // Collection<VatInformation>
 
 
 ```

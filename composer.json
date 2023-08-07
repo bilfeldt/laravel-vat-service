@@ -1,0 +1,59 @@
+{
+  "name": "bilfeldt/laravel-vat-service",
+  "description": "Validate and lookup vat details for companies",
+  "keywords": [
+    "bilfeldt",
+    "laravel",
+    "vat"
+  ],
+  "homepage": "https://github.com/bilfeldt/laravel-vat-service",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/bilfeldt/laravel-vat-service/issues",
+    "source": "https://github.com/bilfeldt/laravel-vat-service"
+  },
+  "authors": [
+    {
+      "name": "Anders Bilfeldt",
+      "email": "abilfeldt@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~8.1.0 || ~8.2.0",
+    "illuminate/contracts": "^10.0",
+    "laravel/framework": "^10.0"
+  },
+  "require-dev": {
+    "nunomaduro/collision": "^7.2",
+    "orchestra/testbench": "^8.0",
+    "phpunit/phpunit": "^10.0",
+    "spatie/laravel-ray": "^1.32"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bilfeldt\\VatService\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bilfeldt\\VatService\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/testbench package:test --no-coverage",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Bilfeldt\\VatService\\VatServiceServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
