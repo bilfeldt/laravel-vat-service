@@ -11,4 +11,27 @@ return [
     |
     */
     'default' => 'stack',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Drivers
+    |--------------------------------------------------------------------------
+    |
+    | Drivers are the various services that can be used to validate VAT numbers.
+    | Usually a driver only supports a subset of countries.
+    | A list of institutions that provide VAT number information can be found
+    | from the list here: https://dinero.dk/tips/tjek-udenlandsk-cvr/
+    |
+     */
+    'drivers' => [
+        'stack' => [
+            'drivers' => ['cvr_api', 'abstract_api'],
+        ],
+        'cvr_api' => [
+            'access_token' => env('VAT_CVR_API_ACCESS_TOKEN'),
+        ],
+        'abstract_api' => [
+            'api_key' => env('VAT_ABSTRACT_API_KEY'),
+        ],
+    ],
 ];

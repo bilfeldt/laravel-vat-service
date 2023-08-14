@@ -14,8 +14,6 @@ Log Laravel requests and responses for statistical purposes and optionally aggre
 
 ## Description
 
-
-
 This package lets you:
 
 - Check if a VAT number has a correct format
