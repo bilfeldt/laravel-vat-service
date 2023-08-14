@@ -8,7 +8,7 @@ use RuntimeException;
  * This exception is thrown when a VAT number is invalid,
  * either because it has an invalid format or because it simply does not exist.
  */
-class InvalidVatException extends RuntimeException
+class InvalidVatException extends RuntimeException implements VatExceptionInterface
 {
     public static function invalidFormat(string $vatNumber): self
     {
