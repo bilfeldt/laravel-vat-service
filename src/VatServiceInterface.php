@@ -13,6 +13,11 @@ interface VatServiceInterface
     public static function supports(string $countryCode): bool;
 
     /**
+     * Get the possible formats for the given country code.
+     *
+     * A star (*) means any number or letter while a hash (#)
+     * means any number and a question mark (?) means any letter.
+     *
      * @param string $countryCode
      * @return Collection<string>
      */
