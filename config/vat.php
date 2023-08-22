@@ -29,6 +29,7 @@ return [
         ],
         'cvr_api' => [
             'access_token' => env('VAT_CVR_API_ACCESS_TOKEN'),
+            'user_agent' => env('VAT_CVR_API_USER_AGENT'),
         ],
         'abstract_api' => [
             'api_key' => env('VAT_ABSTRACT_API_KEY'),

@@ -11,6 +11,7 @@ use Bilfeldt\VatService\VatServiceInterface;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
+use InvalidArgumentException;
 
 class CvrApi implements VatServiceInterface
 {
@@ -94,7 +95,7 @@ class CvrApi implements VatServiceInterface
             throw InvalidVatException::doesNotExist($vatNumber);
         }
 
-        if ($response->isSuccessful()) {
+        if (! $response->successful()) {
             throw new DriverUnavailable('CVR API is currently unavailable.');
         }
 
@@ -114,6 +115,12 @@ class CvrApi implements VatServiceInterface
         );
     }
 
+    /** @inheritDoc */
+    public function search(string $countryCode, string $search): Collection
+    {
+        return collect();
+    }
+
     private function getUrl(): string
     {
         return 'https://cvrapi.dk/api';
@@ -122,7 +129,7 @@ class CvrApi implements VatServiceInterface
     private function getUserAgent(): string
     {
         // Required format described here: https://cvrapi.dk/documentation
-        return 'SmartSend - VatService - Anders Bilfeldt anders@smartsend.io';
+        return config('vat.drivers.cvr_api.user_agent') ?? throw new InvalidArgumentException('Missing user agent.');
     }
 
     private function searchByVatNumber(string $countryCode, string $vatNumber): Response
