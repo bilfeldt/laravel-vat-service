@@ -1,0 +1,60 @@
+{
+    "vat": 29910251,
+    "name": "I/S Just Iversen",
+    "address": "Jonsvangen 10",
+    "zipcode": 4200,
+    "city": "Slagelse",
+    "cityname": null,
+    "protected": true,
+    "phone": 61401169,
+    "email": "kontakt@justiversen.dk",
+    "fax": null,
+    "startdate": "01/11 - 2006",
+    "enddate": "20/08 - 2021",
+    "employees": 3,
+    "addressco": "Kristian Just Iversen",
+    "industrycode": 620200,
+    "industrydesc": "Konsulentbistand vedrørende informationsteknologi",
+    "companycode": 30,
+    "companydesc": "Interessentskab",
+    "creditstartdate": null,
+    "creditbankrupt": false,
+    "creditstatus": null,
+    "owners": [
+        {
+            "name": "Jens Just Iversen"
+        },
+        {
+            "name": "Kristian Just Kastrup"
+        },
+        {
+            "name": "Hans Peter Iversen"
+        },
+        {
+            "name": "Jens Just Iversen"
+        }
+    ],
+    "productionunits": [
+        {
+            "pno": 1012697712,
+            "main": true,
+            "name": "I/S Just Iversen",
+            "address": "Jonsvangen 10",
+            "zipcode": 4200,
+            "city": "Slagelse",
+            "cityname": null,
+            "protected": true,
+            "phone": 61401169,
+            "email": "kontakt@justiversen.dk",
+            "fax": null,
+            "startdate": "01/11 - 2006",
+            "enddate": "20/08 - 2021",
+            "employees": 3,
+            "addressco": "Kristian Just Iversen",
+            "industrycode": 620200,
+            "industrydesc": "Konsulentbistand vedrørende informationsteknologi"
+        }
+    ],
+    "t": 100,
+    "version": 6
+}
